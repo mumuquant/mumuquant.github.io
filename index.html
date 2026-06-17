@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ReddiSense – Reddit Sentiment for Stock Traders</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d1117; color: #e6edf3; line-height: 1.6; }
+  a { color: #58a6ff; text-decoration: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 1px solid #21262d; }
+  .nav .logo { font-weight: 700; font-size: 1.2rem; color: #ff6b35; }
+  .nav-links a { margin-left: 24px; color: #8b949e; font-size: 0.9rem; }
+  .hero { text-align: center; padding: 80px 40px 60px; }
+  .hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 20px; background: linear-gradient(135deg, #ff6b35, #f7931e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero p { font-size: 1.2rem; color: #8b949e; max-width: 560px; margin: 0 auto 36px; }
+  .btn { display: inline-block; background: #ff6b35; color: #fff; padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 1rem; transition: opacity 0.2s; }
+  .btn:hover { opacity: 0.85; color: #fff; }
+  .btn-outline { background: transparent; border: 1px solid #30363d; color: #e6edf3; margin-left: 12px; }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; padding: 60px 40px; max-width: 1000px; margin: 0 auto; }
+  .feature { background: #161b22; border: 1px solid #21262d; border-radius: 12px; padding: 28px; }
+  .feature .icon { font-size: 2rem; margin-bottom: 12px; }
+  .feature h3 { font-size: 1.1rem; margin-bottom: 8px; }
+  .feature p { color: #8b949e; font-size: 0.95rem; }
+  .pricing { text-align: center; padding: 60px 40px; background: #161b22; }
+  .pricing h2 { font-size: 2rem; margin-bottom: 12px; }
+  .pricing .sub { color: #8b949e; margin-bottom: 48px; }
+  .plans { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+  .plan { background: #0d1117; border: 1px solid #21262d; border-radius: 12px; padding: 32px 28px; width: 280px; text-align: left; }
+  .plan.featured { border-color: #ff6b35; }
+  .plan .badge { background: #ff6b35; color: #fff; font-size: 0.75rem; padding: 3px 10px; border-radius: 20px; margin-bottom: 16px; display: inline-block; }
+  .plan h3 { font-size: 1.1rem; margin-bottom: 8px; }
+  .plan .price { font-size: 2.2rem; font-weight: 800; margin: 12px 0; }
+  .plan .price span { font-size: 1rem; color: #8b949e; font-weight: 400; }
+  .plan ul { list-style: none; margin: 20px 0 28px; }
+  .plan ul li { color: #8b949e; font-size: 0.9rem; padding: 6px 0; border-bottom: 1px solid #21262d; }
+  .plan ul li::before { content: "✓ "; color: #3fb950; }
+  .plan ul li.no::before { content: "✗ "; color: #f85149; }
+  .plan .btn { width: 100%; text-align: center; }
+  .footer { text-align: center; padding: 40px; color: #8b949e; font-size: 0.85rem; border-top: 1px solid #21262d; }
+  .footer a { color: #8b949e; margin: 0 12px; }
+  #pricing { scroll-margin-top: 80px; }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="logo">ReddiSense</div>
+  <div class="nav-links">
+    <a href="#pricing">Pricing</a>
+    <a href="https://chrome.google.com/webstore" target="_blank">Install (Chrome / Edge)</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Reddit Sentiment<br>for Stock Traders</h1>
+  <p>See what retail traders are saying about any stock — without leaving your research tab. Real-time Reddit intelligence, right in your browser.</p>
+  <a href="https://chrome.google.com/webstore" class="btn">Add to Chrome / Edge — Free</a>
+  <a href="#pricing" class="btn btn-outline">See Pricing</a>
+</section>
+
+<section class="features">
+  <div class="feature">
+    <div class="icon">📊</div>
+    <h3>Instant Sentiment Score</h3>
+    <p>Bullish, bearish, or neutral — see the community mood for any ticker in one glance.</p>
+  </div>
+  <div class="feature">
+    <div class="icon">🔥</div>
+    <h3>Top Reddit Posts</h3>
+    <p>Surface the hottest discussions from r/wallstreetbets, r/stocks, and r/investing automatically.</p>
+  </div>
+  <div class="feature">
+    <div class="icon">🤖</div>
+    <h3>AI Summary (BYOK)</h3>
+    <p>Use your own DeepSeek, OpenAI, or Claude API key to get a one-sentence Chinese or English summary. We never touch your key.</p>
+  </div>
+  <div class="feature">
+    <div class="icon">📈</div>
+    <h3>7-Day Trend</h3>
+    <p>Track how sentiment has shifted over the past week — catch momentum before it moves price.</p>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <h2>Simple Pricing</h2>
+  <p class="sub">Start free. Upgrade when you need more.</p>
+  <div class="plans">
+    <div class="plan">
+      <h3>Free</h3>
+      <div class="price">$0</div>
+      <ul>
+        <li>Sentiment score per ticker</li>
+        <li>Top 3 Reddit posts</li>
+        <li>Works on any stock page</li>
+        <li class="no">AI summaries</li>
+        <li class="no">7-day sentiment trend</li>
+        <li class="no">Multi-ticker tracking</li>
+      </ul>
+      <a href="https://chrome.google.com/webstore" class="btn btn-outline">Install Free (Chrome / Edge)</a>
+    </div>
+    <div class="plan featured">
+      <div class="badge">Most Popular</div>
+      <h3>Pro</h3>
+      <div class="price">$6<span>/month</span></div>
+      <ul>
+        <li>Everything in Free</li>
+        <li>AI summaries (bring your key)</li>
+        <li>7-day sentiment trend chart</li>
+        <li>Track multiple tickers</li>
+        <li>Priority support</li>
+      </ul>
+      <a href="#" class="btn">Get Pro</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>
+    <a href="terms.html">Terms of Service</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="refund.html">Refund Policy</a>
+  </p>
+  <p style="margin-top:12px;">© 2026 ReddiSense. Built by <a href="https://mumuquant.substack.com">MumuQuant</a>.</p>
+</footer>
+</body>
+</html>
